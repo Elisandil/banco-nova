@@ -1,0 +1,18 @@
+# Archivos de sistema y editores
+.DS_Store
+.idea/
+.vscode/
+
+# Compilación de Maven
+/target/
+
+# Artefactos empaquetados
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+
+# Configuraciones locales
+*.iml
