@@ -41,6 +41,7 @@ public class CreditCard {
     }
     
     public void makePayment(BigDecimal amount) {
+        
         if (!canMakePayment(amount)) {
             throw new IllegalArgumentException("Payment not allowed");
         }
