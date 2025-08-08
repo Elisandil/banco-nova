@@ -1,4 +1,4 @@
-package com.aogdeveloper.banconova.domain.repositories.usecases;
+package com.aogdeveloper.banconova.application.usecases;
 
 import com.aogdeveloper.banconova.domain.entities.Account;
 import com.aogdeveloper.banconova.domain.entities.Transaction;
