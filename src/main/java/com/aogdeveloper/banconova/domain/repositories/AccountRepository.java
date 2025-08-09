@@ -10,10 +10,10 @@ public interface AccountRepository {
     Optional<Account> findByAccountNumber(String accNumber);
     Optional<Account> findById(Long id);
     List<Account> findByCustomerID(Long id);
-    List<Account> findByActiveAndCustomerID(boolean active, Long id);
+    List<Account> findByActiveAndCustomerId(boolean active, Long id);
     List<Account> findByType(AccountType type);
     List<Account> findAll();
-    void deleteByID(Long id);
+    void deleteById(Long id);
     boolean existsByAccountNumber(String accNumber);
-    long countByCustomerID(Long id);
+    long countByCustomerId(Long id);
 }

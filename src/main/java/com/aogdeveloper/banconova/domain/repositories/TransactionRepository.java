@@ -9,17 +9,17 @@ import java.util.Optional;
 
 public interface TransactionRepository {
     Transaction save(Transaction trans);
-    Optional<Transaction> findByID(Long id);
-    List<Transaction> findByAccID(Long id);
-    List<Transaction> findByAccIDAndStatus(Long id, TransactionStatus status);
-    List<Transaction> findByAccIDAndType(Long id, TransactionType type);
-    List<Transaction> findByAccIDAndCreatedAtBetween(
+    Optional<Transaction> findById(Long id);
+    List<Transaction> findByAccId(Long id);
+    List<Transaction> findByAccIdAndStatus(Long id, TransactionStatus status);
+    List<Transaction> findByAccIdAndType(Long id, TransactionType type);
+    List<Transaction> findByAccIdAndCreatedAtBetween(
         Long id,
         LocalDateTime startDate,
         LocalDateTime endDate    
     );
-    List<Transaction> findByAccIDOrderByCreatedAtDesc(Long id);
-    List<Transaction> findByAccIDAndCreatedAtBetweenOrderByCreatedAtDesc(
+    List<Transaction> findByAccIdOrderByCreatedAtDesc(Long id);
+    List<Transaction> findByAccIdAndCreatedAtBetweenOrderByCreatedAtDesc(
         Long id,
         LocalDateTime startDate,
         LocalDateTime endDate
@@ -27,5 +27,5 @@ public interface TransactionRepository {
     List<Transaction> findByReference(String reference);
     List<Transaction> findAll();
     void deleteById(Long id);
-    long countByAccID(Long id);
+    long countByAccId(Long id);
 }

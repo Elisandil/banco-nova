@@ -19,7 +19,8 @@ public class TransactionUseCase {
     private final AccountRepository accountRepository;
     
     @Transactional
-    public Transaction deposit(Long accountId, BigDecimal amount, String description) {
+    public Transaction deposit(Long accountId, BigDecimal amount, 
+            String description) {
         Optional<Account> accountOpt = accountRepository.findById(accountId);
         
         if (accountOpt.isEmpty()) {
@@ -75,7 +76,7 @@ public class TransactionUseCase {
     }
     
     public List<Transaction> getAccountTransactions(Long accountId) {
-        return transactionRepository.findByAccIDOrderByCreatedAtDesc(accountId);
+        return transactionRepository.findByAccIdOrderByCreatedAtDesc(accountId);
     }
     
     public List<Transaction> getAccountTransactionsByDateRange(
@@ -84,7 +85,7 @@ public class TransactionUseCase {
             LocalDateTime endDate) {
         
         return transactionRepository
-                .findByAccIDAndCreatedAtBetweenOrderByCreatedAtDesc(
+                .findByAccIdAndCreatedAtBetweenOrderByCreatedAtDesc(
                 accountId, startDate, endDate);
     }
     

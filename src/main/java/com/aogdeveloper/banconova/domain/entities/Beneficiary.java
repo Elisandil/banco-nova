@@ -36,7 +36,7 @@ public class Beneficiary {
     
     public String getDisplayName() {
         return alias != null && 
-                alias.isEmpty() ? 
+                !alias.isEmpty() ? 
                     alias : 
                     accountHolderName;
     }

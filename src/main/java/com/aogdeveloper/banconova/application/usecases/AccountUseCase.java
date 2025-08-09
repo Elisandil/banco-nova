@@ -27,7 +27,7 @@ public class AccountUseCase {
             throw new IllegalArgumentException(
                     "Customer cannot create account");
         }
-        long accountCount = accountRepository.countByCustomerID(customerId);
+        long accountCount = accountRepository.countByCustomerId(customerId);
         
         if (accountCount >= MAX_ACCOUNTS_PER_CUSTOMER) {
             throw new IllegalArgumentException(
@@ -49,7 +49,7 @@ public class AccountUseCase {
     }
     
     public List<Account> getCustomerAccounts(Long customerId) {
-        return accountRepository.findByActiveAndCustomerID(true, customerId);
+        return accountRepository.findByActiveAndCustomerId(true, customerId);
     }
     
     public Optional<Account> getAccountById(Long accountId) {

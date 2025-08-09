@@ -134,7 +134,7 @@ public class TransferUseCase {
     
     public List<Transfer> getAccountTransfers(Long accountId) {
         return transferRepository
-                .findBySourceAccountIDOrderByCreatedAtDesc(accountId);
+                .findBySourceAccountIdOrderByCreatedAtDesc(accountId);
     }
     
     private void createTransferTransactions(
