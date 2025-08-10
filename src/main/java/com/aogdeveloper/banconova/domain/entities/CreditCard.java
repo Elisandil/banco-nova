@@ -21,7 +21,7 @@ public class CreditCard {
     private BigDecimal availableCredit;
     private BigDecimal currentBalance;
     private LocalDate expiryDate;
-    private String cvv;
+    private String cvv; // In production this won't be visible
     private CardStatus status;
     private LocalDateTime createdAt;
     
